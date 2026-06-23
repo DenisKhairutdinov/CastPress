@@ -1,0 +1,19 @@
+.donate {
+  @include padding-block;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(40);
+}
+
+.donate__title {
+  @include heading-1;
+
+  color: var(--primary-text);
+}
+
+.donate__text {
+  @include heading-4;
+
+  color: var(--primary-text);
+}

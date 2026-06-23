@@ -1,0 +1,80 @@
+@import 'modern-css-reset/dist/reset.css';
+
+@import '/src/styles/base/+.css';
+@import '/src/styles/blocks/+.css';
+
+html {
+  color: var(--primary-text);
+}
+
+body {
+  touch-action: manipulation;
+  background-color: var(--background);
+  transition:
+    background-color $medium $ease-out,
+    filter $medium $ease-out,
+    color $medium $ease-out;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+body.lock {
+  touch-action: none;
+  overflow: hidden;
+}
+
+body.full-height-layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+svg,
+img {
+  display: block;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  &:focus-visible {
+    border-radius: 4px;
+    outline: 1px solid var(--primary-text);
+  }
+}
+
+.container {
+  container-name: main;
+  container-type: inline-size;
+  inline-size: rem(288);
+  margin-inline: auto;
+
+  @media (width >= $breakpoint) {
+    inline-size: rem(670);
+  }
+}
+
+[hidden] {
+  display: none !important;
+}
+
+// Observer
+.main-page-section {
+  transform: translateY(30%);
+  opacity: 0;
+  transition:
+    opacity $slow * 3 $ease-out,
+    transform $slow * 3 $ease-out;
+}
+
+.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}

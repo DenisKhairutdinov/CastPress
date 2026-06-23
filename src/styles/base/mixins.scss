@@ -1,0 +1,130 @@
+@use '/src/styles/base/vars' as *;
+@use '/src/styles/base/functions' as *;
+
+// fonts
+@mixin menu-font {
+  font-family: SourceSerifProSemiBold, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+@mixin heading-1 {
+  font-family: SourceSerifProSemiBold, sans-serif;
+  font-size: rem(26);
+  line-height: rem(32);
+}
+
+@mixin heading-2 {
+  font-family: SourceSerifProSemibold, sans-serif;
+  font-size: rem(21);
+  line-height: rem(24);
+}
+
+@mixin heading-3 {
+  font-family: SourceSerifProRegular, sans-serif;
+  font-size: rem(18);
+  line-height: rem(24);
+}
+
+@mixin heading-4 {
+  font-family: SourceSerifProRegular, sans-serif;
+  font-size: rem(16);
+  line-height: rem(24);
+}
+
+@mixin heading-5-semibold {
+  font-family: SourceSerifProSemiBold, sans-serif;
+  font-size: rem(14);
+  line-height: rem(24);
+}
+
+@mixin heading-5-regular {
+  font-family: SourceSerifProRegular, sans-serif;
+  font-size: rem(14);
+  line-height: rem(24);
+}
+
+@mixin heading-6-semibold {
+  font-family: SourceSerifProSemiBold, sans-serif;
+  font-size: rem(12);
+  letter-spacing: 0.16em;
+}
+
+@mixin heading-6-regular {
+  font-family: SourceSerifProRegular, sans-serif;
+  font-size: rem(12);
+  letter-spacing: 0.16em;
+}
+
+// other
+@mixin reset-button-styles {
+  cursor: pointer;
+
+  padding: 0;
+  border: none;
+
+  line-height: 1;
+
+  background: none;
+}
+
+@mixin custom-button {
+  padding-block: rem(8);
+  padding-inline: rem(16);
+  border-radius: $border-radius;
+
+  color: var(--background);
+
+  background-color: var(--accent);
+
+  transition:
+    color $medium $ease-out,
+    scale $medium $ease-out,
+    opacity $medium $ease-out;
+
+  @media (pointer: fine) {
+    &:active {
+      scale: 0.98;
+      opacity: 0.8;
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active {
+      scale: 0.98;
+      opacity: 0.8;
+    }
+  }
+}
+
+@mixin padding-block {
+  padding-block: rem(48);
+
+  @media (width >= $breakpoint) {
+    padding-block: rem(96);
+  }
+}
+
+@mixin centering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin hidden-lable {
+  position: absolute;
+
+  overflow: hidden;
+
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(50%);
+}

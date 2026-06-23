@@ -1,0 +1,150 @@
+{% set pageTitle = "About" %}
+{% set bodyClass = "default" %}
+{% extends "layout.njk" %}
+
+{% block content %}
+  <section class="about container">
+    <h1 class="about__title">About</h1>
+    <h2 class="about__subtitle">What, when and how?</h2>
+    <p class="about__text">
+      We create conversations that matter — stories, ideas, and voices worth listening to. New
+      episodes are released on a consistent schedule, keeping our audience engaged and connected.
+      Every show is crafted with intention: from research and planning to recording and production,
+      we focus on clarity, authenticity, and high‑quality sound.
+    </p>
+    <h2 class="about__subtitle">Team members</h2>
+    <ul class="team">
+      <li class="team__item">
+        <article class="team__card">
+          <picture class="team__photo-wrapper">
+            <source srcset="/src/assets/images/team/Nick-Carleton.webp" type="image/webp" />
+            <img
+              class="team__photo"
+              src="/src/assets/images/team/Nick-Carleton.png"
+              alt="Nick Carleton, producer"
+              loading="lazy"
+              decoding="async"
+              width="288"
+              height="288"
+            />
+          </picture>
+          <div class="team__info">
+            <p class="team__position">producer</p>
+            <h3 class="team__name">Nick Carleton</h3>
+            <p class="team__description">
+              He plans episodes, coordinates guests, manages production, and ensures every release
+              meets the highest standards.
+            </p>
+            <ul class="team__social-links">
+              <li class="team__social-item">
+                <a
+                  href="https://www.linkedin.com/"
+                  class="team__social-link"
+                  aria-label="go to LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="team__social-icon" aria-hidden="true">
+                    <use href="#icon-team-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="team__social-item">
+                <a
+                  href="https://github.com/"
+                  class="team__social-link"
+                  aria-label="go to GitHub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="team__social-icon" aria-hidden="true">
+                    <use href="#icon-team-github"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="team__social-item">
+                <a
+                  href="https://x.com/"
+                  class="team__social-link"
+                  aria-label="go to twitter"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="team__social-icon" aria-hidden="true">
+                    <use href="#icon-team-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </li>
+
+      <li class="team__item">
+        <article class="team__card">
+          <picture class="team__photo-wrapper">
+            <source srcset="/src/assets/images/team/Aida-Cave.webp" type="image/webp" />
+            <img
+              class="team__photo"
+              src="/src/assets/images/team/Aida-Cave.png"
+              alt="Aida Cave, host"
+              loading="lazy"
+              decoding="async"
+              width="288"
+              height="288"
+            />
+          </picture>
+          <div class="team__info">
+            <p class="team__position">host</p>
+            <h3 class="team__name">Aida Cave</h3>
+            <p class="team__description">
+              She leads the conversation, sets the tone, and creates a natural, engaging atmosphere
+              for every episode.
+            </p>
+            <ul class="team__social-links">
+              <li class="team__social-item">
+                <a
+                  href="https://www.linkedin.com/"
+                  class="team__social-link"
+                  aria-label="go to LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="team__social-icon" aria-hidden="true">
+                    <use href="#icon-team-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="team__social-item">
+                <a
+                  href="https://github.com/"
+                  class="team__social-link"
+                  aria-label="go to GitHub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="team__social-icon" aria-hidden="true">
+                    <use href="#icon-team-github"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="team__social-item">
+                <a
+                  href="https://x.com/"
+                  class="team__social-link"
+                  aria-label="go to twitter"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="team__social-icon" aria-hidden="true">
+                    <use href="#icon-team-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </section>
+{% endblock %}

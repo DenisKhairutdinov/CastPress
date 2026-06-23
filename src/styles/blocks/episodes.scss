@@ -1,0 +1,14 @@
+.episodes {
+  @include padding-block;
+
+  &--block-padding {
+    padding-block: rem(32);
+  }
+}
+
+.episodes__title {
+  @include heading-1;
+
+  margin-block-end: rem(40);
+  color: var(--primary-text);
+}

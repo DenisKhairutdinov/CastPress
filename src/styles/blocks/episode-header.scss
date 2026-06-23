@@ -1,0 +1,62 @@
+.episode-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  inline-size: 100%;
+}
+
+.episode-header__cover {
+  inline-size: rem(180);
+  block-size: rem(180);
+  margin-block-end: rem(40);
+  border-radius: $border-radius;
+}
+
+.episode-header__link {
+  margin-block-end: rem(16);
+  color: var(--primary-text);
+  text-decoration: none;
+  transition:
+    color $medium $ease-out,
+    scale $medium $ease-out,
+    opacity $medium $ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  @media (pointer: fine) {
+    &:active {
+      scale: 0.98;
+      color: var(--accent);
+      opacity: 0.8;
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active {
+      scale: 0.98;
+      color: var(--accent);
+      opacity: 0.8;
+    }
+  }
+}
+
+.episode-header__title {
+  @include heading-1;
+
+  text-align: center;
+}
+
+.episode-header__info {
+  @include heading-5-regular;
+
+  margin-block-end: rem(48);
+  color: var(--primary-text);
+}
+
+.episode-header__player {
+  margin-block-end: rem(40);
+}

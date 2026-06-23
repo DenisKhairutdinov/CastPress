@@ -1,0 +1,153 @@
+.header {
+  position: sticky;
+  z-index: 10;
+  inset-block-start: 0;
+
+  contain: layout;
+  display: flex;
+  justify-content: center;
+
+  min-block-size: rem($header-height-mobile);
+  border-block-end: $border;
+
+  background-color: var(--background);
+
+  view-transition-name: header;
+
+  @media (width >= $breakpoint) {
+    min-block-size: rem($header-height);
+  }
+}
+
+.header__wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  inline-size: 100%;
+  max-inline-size: rem(1140);
+  margin-inline: rem(16);
+}
+
+.header__logo-link {
+  @include centering;
+
+  block-size: rem(44);
+
+  @media (hover: hover) {
+    &:hover .header__logo-image {
+      fill: var(--accent);
+    }
+  }
+
+  @media (pointer: fine) {
+    &:active .header__logo-image {
+      scale: 0.98;
+      opacity: 0.8;
+      fill: var(--accent);
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active .header__logo-image {
+      scale: 0.98;
+      opacity: 0.8;
+      fill: var(--accent);
+    }
+  }
+}
+
+.header__logo-image {
+  inline-size: rem(79);
+  block-size: rem(16);
+  fill: var(--primary-text);
+  transition:
+    fill $medium $ease-out,
+    scale $medium $ease-out,
+    opacity $medium $ease-out;
+}
+
+.header__actions {
+  display: flex;
+  flex-direction: row;
+}
+
+.header__theme-buttons-wrapper {
+  cursor: pointer;
+
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-end: 0;
+  transform: translateY(calc(100% + rem(16)));
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+
+  inline-size: rem(38);
+  block-size: rem(44);
+  padding-inline: rem(6);
+  border-radius: $border-radius;
+
+  view-transition-name: theme-button;
+
+  &--dark-theme {
+    justify-content: end;
+    padding-inline: 0;
+  }
+
+  @media (hover: hover) {
+    &:hover .header__theme-button {
+      transform: scale(1.08);
+    }
+  }
+
+  @media (pointer: fine) {
+    &:active .header__theme-button {
+      scale: 0.98;
+      opacity: 0.8;
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active .header__theme-button {
+      scale: 0.98;
+      opacity: 0.8;
+    }
+  }
+}
+
+.header__theme-button {
+  @include reset-button-styles;
+  @include centering;
+
+  display: flex;
+  flex-direction: row;
+
+  min-inline-size: rem(32);
+  min-block-size: rem(32);
+  border-radius: 50%;
+
+  background-color: var(--primary-text);
+
+  transition:
+    transform $medium $ease-out,
+    scale $medium $ease-out,
+    opacity $medium $ease-out;
+}
+
+.header__light-theme-icon {
+  inline-size: rem(20);
+  block-size: rem(20);
+  fill: var(--background);
+}
+
+.header__dark-theme-icon {
+  inline-size: rem(16);
+  block-size: rem(17);
+  fill: var(--background);
+}

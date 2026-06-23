@@ -1,0 +1,32 @@
+// colors
+$primary: #222;
+$filter-primary: invert(0%) sepia(6%) saturate(22%) hue-rotate(221deg) brightness(102%)
+  contrast(73%);
+$accent: #7247ca;
+$filter-accent: invert(51%) sepia(88%) saturate(6603%) hue-rotate(248deg) brightness(85%)
+  contrast(83%);
+$hover: #58379b;
+$gray: #979797;
+$darkgray: #555;
+$light-gray-01: #f5f5f7;
+$light-gray-02: #eaeaee;
+$white: #fff;
+$errors: #ff3636;
+
+// other
+$header-height-mobile: 76; // px
+$header-height: 106; // px
+$border: 1px solid var(--border);
+$border-radius: 4px;
+
+// Animations
+$fast: 150ms;
+$medium: 250ms;
+$slow: 500ms;
+$ease-out: cubic-bezier(0, 0.55, 0.45, 1);
+
+// media
+$breakpoint: 768; // px
+
+// container
+$container: 41.875rem;

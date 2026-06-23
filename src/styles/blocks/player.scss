@@ -1,0 +1,141 @@
+.player {
+  user-select: none;
+
+  display: grid;
+  grid-template-columns: auto auto 1fr auto auto auto;
+  align-items: center;
+
+  inline-size: 100%;
+}
+
+.player__play-pause-button {
+  @include reset-button-styles;
+  @include centering;
+
+  position: relative;
+  inline-size: rem(44);
+  block-size: rem(44);
+
+  @media (hover: hover) {
+    &:hover .player__play-pause-icon {
+      fill: var(--accent);
+    }
+  }
+
+  @media (pointer: fine) {
+    &:active .player__play-pause-icon {
+      scale: 0.94;
+      opacity: 0.8;
+      fill: var(--accent);
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active .player__play-pause-icon {
+      scale: 0.94;
+      opacity: 0.8;
+      fill: var(--accent);
+    }
+  }
+}
+
+.player__play-pause-icon {
+  width: rem(14);
+  height: rem(16);
+  fill: var(--primary-text);
+  transition:
+    fill $medium $ease-out,
+    scale $medium $ease-out,
+    opacity $medium $ease-out;
+}
+
+.player__current-time,
+.player__duration {
+  @include heading-6-regular;
+
+  color: var(--secondary-text);
+}
+
+.player__progress {
+  cursor: pointer;
+
+  position: relative;
+
+  min-inline-size: 0;
+  block-size: rem(7);
+  margin-inline: rem(4);
+  border-radius: 2px;
+
+  appearance: none;
+  background: linear-gradient(to right, var(--primary-text) 0%, var(--control-background) 0%);
+
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+    inset-block-end: 100%;
+    inset-inline-start: 0;
+
+    inline-size: 100%;
+    block-size: rem(18);
+  }
+
+  &::after {
+    inset-block-start: 100%;
+  }
+
+  &::-webkit-slider-thumb {
+    width: 0;
+    height: 0;
+    border: none;
+    appearance: none;
+  }
+
+  &::-moz-range-thumb {
+    width: 0;
+    height: 0;
+    border: none;
+  }
+}
+
+.player__mute-button {
+  @include reset-button-styles;
+  @include centering;
+
+  position: relative;
+  inline-size: rem(44);
+  block-size: rem(44);
+
+  @media (hover: hover) {
+    &:hover .player__mute-icon {
+      fill: var(--accent);
+    }
+  }
+
+  @media (pointer: fine) {
+    &:active .player__mute-icon {
+      scale: 0.94;
+      opacity: 0.8;
+      fill: var(--accent);
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active .player__mute-icon {
+      scale: 0.94;
+      opacity: 0.8;
+      fill: var(--accent);
+    }
+  }
+}
+
+.player__mute-icon {
+  width: rem(18);
+  height: rem(16);
+  fill: var(--primary-text);
+  transition:
+    fill $medium $ease-out,
+    scale $medium $ease-out,
+    opacity $medium $ease-out;
+}

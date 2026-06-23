@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>{{ pageTitle }} | CastPress.</title>
+
+    <meta
+      name="description"
+      content="CastPress — Your ultimate podcast blog and platform. Discover inspiring episodes, deep dives, expert insights, and engaging stories. Tune in and explore the world of podcasting!"
+    />
+    <meta property="og:title" content="CastPress — Discover Inspiring Podcasts & Stories" />
+    <meta
+      property="og:description"
+      content="Explore top podcast episodes, exclusive insights, and expert discussions. Listen now and join the CastPress community."
+    />
+    <meta property="og:image" content="#" />
+    <meta property="og:url" content="#" />
+    <meta property="og:type" content="website" />
+
+    <meta name="format-detection" content="telephone=no" />
+
+    <link
+      rel="preload"
+      href="/assets/fonts/SourceSerifPro-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/SourceSerifPro-Semibold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <script>
+      if (localStorage.getItem('dark-theme') === 'enabled') {
+        document.documentElement.setAttribute('data-dark-theme', '');
+      }
+    </script>
+
+    {% include "transition-api.njk" %}
+  </head>
+  <body class="{{ bodyClass }}" ontouchstart="">
+    {% include "header.njk" %}
+    <main class="main">{% block content %}{% endblock %}</main>
+    {% include "footer.njk" %}
+    <script type="module" src="/src/scripts/main.ts"></script>
+  </body>
+</html>

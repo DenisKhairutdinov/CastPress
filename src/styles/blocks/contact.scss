@@ -1,0 +1,17 @@
+.contact {
+  @include padding-block;
+}
+
+.contact__title {
+  @include heading-1;
+
+  margin-block-end: rem(12);
+  color: var(--primary-text);
+}
+
+.contact__description {
+  @include heading-3;
+
+  margin-block-end: rem(48);
+  color: var(--primary-text);
+}

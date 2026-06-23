@@ -1,0 +1,20 @@
+{% set pageTitle = "Donate" %}
+{% set bodyClass = "full-height-layout" %}
+{% extends "layout.njk" %}
+
+{% block content %}
+  <section class="donate container">
+    <h1 class="donate__title">Support CastPress.</h1>
+    <p class="donate__text">
+      Help us continue to break down silos and spread knowledge through CastPress.<br />By being
+      funded, with your valuable donations, we can continue to bring you podcast content that is
+      fresh, relevant and helps you grow.
+    </p>
+    <a href="#" class="custom-button" target="_blank">
+      <span class="custom-button__text">Donate Now</span>
+      <svg class="custom-button__icon" aria-hidden="true">
+        <use href="#icon-custom-button-arrow"></use>
+      </svg>
+    </a>
+  </section>
+{% endblock %}

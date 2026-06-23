@@ -1,0 +1,37 @@
+{% set pageTitle = "Blog" %}
+{% set bodyClass = "default" %}
+{% extends "layout.njk" %}
+
+{% block content %}
+  <section class="blog container">
+    <h1 class="blog__title">Blog</h1>
+    <ul class="blog-list" data-blog-list></ul>
+    <nav class="pagination blog__pagination" data-pagination>
+      <button
+        class="pagination__arrow pagination__arrow--left-arrow pagination__arrow--unactive"
+        type="button"
+        aria-label="previous"
+        data-arrow="left-arrow"
+        data-pagination-left-arrow
+      >
+        <svg class="pagination__arrow-icon" aria-hidden="true">
+          <use href="#icon-pagination-arrow"></use>
+        </svg>
+      </button>
+      <div class="pagination__wrapper" data-pagination-wrapper>
+        <div class="pagination__central-buttons" data-central-buttons></div>
+      </div>
+      <button
+        class="pagination__arrow pagination__arrow--right-arrow"
+        type="button"
+        aria-label="previous"
+        data-arrow="right-arrow"
+        data-pagination-right-arrow
+      >
+        <svg class="pagination__arrow-icon" aria-hidden="true">
+          <use href="#icon-pagination-arrow"></use>
+        </svg>
+      </button>
+    </nav>
+  </section>
+{% endblock %}

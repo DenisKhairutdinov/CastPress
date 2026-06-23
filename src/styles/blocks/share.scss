@@ -1,0 +1,53 @@
+.share {
+  display: flex;
+  flex-direction: row;
+  column-gap: rem(16);
+  align-items: center;
+}
+
+.share__text {
+  @include heading-4;
+}
+
+.share__list {
+  display: flex;
+  flex-direction: row;
+}
+
+.share__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  inline-size: rem(36);
+  block-size: rem(44);
+
+  @media (hover: hover) {
+    &:hover .share__icon {
+      fill: var(--accent);
+    }
+  }
+
+  @media (pointer: fine) {
+    &:active .share__icon {
+      scale: 0.94;
+      opacity: 0.8;
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active .share__icon {
+      scale: 0.94;
+      opacity: 0.8;
+    }
+  }
+}
+
+.share__icon {
+  block-size: rem(16);
+  fill: var(--accent);
+  transition:
+    fill $medium $ease-out,
+    scale $medium $ease-out,
+    opacity $medium $ease-out;
+}

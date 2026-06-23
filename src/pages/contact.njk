@@ -1,0 +1,71 @@
+{% set pageTitle = "Contact" %}
+{% set bodyClass = "full-height-layout" %}
+{% extends "layout.njk" %}
+
+{% block content %}
+  <section class="contact container">
+    <h1 class="contact__title">Contact</h1>
+    <p class="contact__description">Love to hear your thoughts, fears & feelings...</p>
+    <form action="#" class="form contact__form" method="POST" data-form>
+      <div class="form__group">
+        <label for="name" class="form__label">Name *</label>
+        <input
+          type="text"
+          id="name"
+          class="form__input"
+          name="user-name"
+          placeholder="Enter your name..."
+          required
+          aria-describedby="name-error-empty"
+          aria-invalid="false"
+          autocomplete="name"
+        />
+        <span id="name-error-empty" class="form__error form__error--empty"
+          >* This field is required to proceed</span
+        >
+      </div>
+
+      <div class="form__group">
+        <label for="email" class="form__label">Email *</label>
+        <input
+          type="email"
+          id="email"
+          class="form__input"
+          name="user-email"
+          placeholder="Enter your email..."
+          required
+          aria-describedby="email-error-empty email-error-invalid"
+          aria-invalid="false"
+          autocomplete="email"
+        />
+        <span id="email-error-empty" class="form__error form__error--empty"
+          >* This field is required to proceed</span
+        >
+        <span id="email-error-invalid" class="form__error form__error--invalid"
+          >* Please enter a valid email address</span
+        >
+      </div>
+
+      <div class="form__group">
+        <label for="message" class="form__label">Message</label>
+        <textarea
+          name="user-message"
+          id="message"
+          class="form__textarea"
+          placeholder="Enter your message..."
+        ></textarea>
+      </div>
+
+      <button type="submit" class="custom-button contact__custom-button">
+        <span class="custom-button__text">Submit</span>
+        <svg class="custom-button__icon" aria-hidden="true">
+          <use href="#icon-custom-button-arrow"></use>
+        </svg>
+      </button>
+
+      <p class="form__message form__message--hidden" aria-live="polite" data-form-message>
+        Success! Your message has been sent!
+      </p>
+    </form>
+  </section>
+{% endblock %}

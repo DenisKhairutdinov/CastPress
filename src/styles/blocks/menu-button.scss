@@ -1,0 +1,62 @@
+.menu-button {
+  @include reset-button-styles;
+
+  cursor: pointer;
+  position: relative;
+  inline-size: rem(32);
+  block-size: rem(32);
+
+  &::after,
+  &::before {
+    content: '';
+
+    position: absolute;
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+    rotate: 0;
+
+    width: rem(24);
+    height: 1px;
+
+    background-color: var(--primary-text);
+
+    transition:
+      inset-block-start $medium $ease-out $medium,
+      inset-block-end $medium $ease-out $medium,
+      transform $medium $ease-out;
+  }
+
+  &::after {
+    inset-block-start: rem(8);
+  }
+
+  &::before {
+    inset-block-end: rem(8);
+  }
+
+  &--open {
+    &::after,
+    &::before {
+      transition:
+        inset-block-start $medium $ease-out,
+        inset-block-end $medium $ease-out,
+        transform $medium ease $medium;
+    }
+
+    &::after {
+      inset-block-start: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      rotate: 45deg;
+    }
+
+    &::before {
+      inset-block-end: 50%;
+      transform: translateX(-50%) translateY(50%);
+      rotate: -45deg;
+    }
+  }
+
+  @media (width >= $breakpoint) {
+    display: none;
+  }
+}

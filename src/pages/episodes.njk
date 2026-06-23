@@ -1,0 +1,37 @@
+{% set pageTitle = "Episodes" %}
+{% set bodyClass = "full-height-layout" %}
+{% extends "layout.njk" %}
+
+{% block content %}
+  <section class="episodes container">
+    <ul class="episodes-list episodes__episodes-list" data-episodes-list></ul>
+    <nav class="pagination episodes__pagination" data-pagination>
+      <button
+        class="pagination__arrow pagination__arrow--left-arrow pagination__arrow--unactive"
+        type="button"
+        aria-label="previous"
+        data-arrow="left-arrow"
+        data-pagination-left-arrow
+      >
+        <svg class="pagination__arrow-icon" aria-hidden="true">
+          <use href="#icon-pagination-arrow"></use>
+        </svg>
+      </button>
+      <div class="pagination__wrapper" data-pagination-wrapper>
+        <div class="pagination__central-buttons" data-central-buttons></div>
+      </div>
+      <button
+        class="pagination__arrow pagination__arrow--right-arrow"
+        type="button"
+        aria-label="previous"
+        data-arrow="right-arrow"
+        data-pagination-right-arrow
+      >
+        <svg class="pagination__arrow-icon" aria-hidden="true">
+          <use href="#icon-pagination-arrow"></use>
+        </svg>
+      </button>
+    </nav>
+  </section>
+  </section>
+{% endblock %}

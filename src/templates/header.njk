@@ -1,0 +1,36 @@
+<header class="header">
+  <div class="header__wrapper">
+    <a href="/index" class="header__logo-link">
+      <svg class="header__logo-image">
+        <use href="#icon-logo"></use>
+      </svg>
+    </a>
+    <div class="header__actions">
+      {% include "menu.njk" %}
+
+      <div class="header__theme-buttons-wrapper" data-theme-buttons>
+        <button
+          class="header__theme-button"
+          aria-label="switch to dark theme"
+          type="button"
+          data-theme-button
+        >
+          <svg class="header__dark-theme-icon" aria-hidden="true">
+            <use href="#icon-theme-buttons-dark-theme"></use>
+          </svg>
+        </button>
+        <button
+          class="header__theme-button"
+          aria-label="switch to light theme"
+          type="button"
+          hidden
+          data-theme-button
+        >
+          <svg class="header__light-theme-icon" aria-hidden="true">
+            <use href="#icon-theme-buttons-light-theme"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

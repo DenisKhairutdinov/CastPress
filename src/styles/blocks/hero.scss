@@ -1,0 +1,28 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  block-size: calc(100svh - rem($header-height-mobile));
+  min-block-size: calc(100svh - rem($header-height-mobile));
+
+  @container main (width >= #{$container}) {
+    max-block-size: calc(100svh - rem($header-height));
+  }
+}
+
+.hero__episode {
+  margin-block-end: rem(0);
+
+  & .podcast-header__title {
+    margin-block-end: rem(40);
+  }
+
+  & .episode-header__info {
+    display: none;
+  }
+
+  @media (width >= $breakpoint) {
+    margin-block-end: rem(96);
+  }
+}

@@ -1,0 +1,24 @@
+.about {
+  @include padding-block;
+}
+
+.about__title {
+  @include heading-1;
+
+  margin-block-end: rem(40);
+  color: var(--primary-text);
+}
+
+.about__subtitle {
+  @include heading-2;
+
+  margin-block-end: rem(24);
+  color: var(--primary-text);
+}
+
+.about__text {
+  @include heading-4;
+
+  margin-block-end: rem(40);
+  color: var(--primary-text);
+}

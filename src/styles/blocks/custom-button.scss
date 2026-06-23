@@ -1,0 +1,39 @@
+.custom-button {
+  @include reset-button-styles;
+  @include custom-button;
+
+  display: flex;
+  flex-direction: row;
+  column-gap: rem(8);
+  align-items: center;
+
+  inline-size: max-content;
+
+  text-decoration: none;
+
+  &--light {
+    color: var(--accent);
+    background-color: var(--control-background);
+  }
+
+  @media (hover: hover) {
+    &:hover .custom-button__icon {
+      transform: translateX(rem(4));
+    }
+  }
+}
+
+.custom-button__text {
+  @include heading-5-regular;
+}
+
+.custom-button__icon {
+  width: rem(5);
+  height: rem(8);
+  fill: var(--background);
+  transition: transform $medium $ease-out;
+
+  &--accent {
+    fill: var(--accent);
+  }
+}

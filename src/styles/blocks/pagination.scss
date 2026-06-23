@@ -1,0 +1,132 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  column-gap: rem(4);
+  justify-content: center;
+}
+
+.pagination__arrow {
+  @include reset-button-styles;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-inline-size: rem(30);
+  block-size: rem(30);
+  margin-block-start: rem(2);
+  border-radius: 4px;
+
+  transition:
+    padding-inline-start $medium $ease-out,
+    scale $medium $ease-out,
+    opacity $medium $ease-out;
+
+  &:first-child {
+    transform: scaleX(-1);
+  }
+
+  &--unactive {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      padding-inline-start: rem(8);
+    }
+  }
+
+  @media (pointer: fine) {
+    &:active {
+      scale: 0.94;
+      opacity: 0.8;
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active {
+      scale: 0.94;
+      opacity: 0.8;
+    }
+  }
+}
+
+.pagination__arrow-icon {
+  width: rem(6);
+  height: rem(10);
+  fill: var(--primary-text);
+}
+
+.pagination__wrapper {
+  display: flex;
+  flex-direction: row;
+  column-gap: rem(2);
+  align-items: center;
+}
+
+.pagination__central-buttons {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  column-gap: rem(4);
+
+  padding-block: rem(2);
+  padding-inline: rem(2);
+}
+
+.pagination__button {
+  @include reset-button-styles;
+  @include heading-6-regular;
+
+  cursor: pointer;
+  user-select: none;
+
+  display: flex;
+  column-gap: rem(4);
+  align-items: center;
+  justify-content: center;
+
+  min-inline-size: rem(30);
+  block-size: rem(30);
+  border-radius: 4px;
+
+  color: var(--primary-text);
+
+  background-color: var(--control-background);
+
+  transition:
+    background-color $medium $ease-out,
+    scale $medium $ease-out,
+    opacity $medium $ease-out;
+
+  &--active {
+    background-color: var(--control-hover);
+  }
+
+  &--disable {
+    pointer-events: none;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--control-hover);
+    }
+  }
+
+  @media (pointer: fine) {
+    &:active {
+      scale: 0.98;
+      opacity: 0.8;
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active {
+      scale: 0.98;
+      opacity: 0.8;
+    }
+  }
+}

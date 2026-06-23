@@ -1,0 +1,28 @@
+.latest-posts {
+  margin-block-end: rem(48);
+  padding-block-start: rem(32);
+
+  @media (width >= $breakpoint) {
+    margin-block-end: rem(64);
+  }
+}
+
+.latest-posts__title {
+  @include heading-1;
+
+  margin-block-end: rem(24);
+  color: var(--primary-text);
+}
+
+.latest-posts .blog-list {
+  min-block-size: 0;
+  margin-block-end: rem(40);
+
+  & .blog-list__item:last-child {
+    display: none;
+  }
+
+  @container main (width >= #{$container}) {
+    margin-block-end: rem(48);
+  }
+}

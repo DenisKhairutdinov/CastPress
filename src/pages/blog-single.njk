@@ -1,0 +1,78 @@
+{% set pageTitle = "Blog" %}
+{% set bodyClass = "default" %}
+{% extends "layout.njk" %}
+
+{% block content %}
+  <section class="blog container">
+    <picture class="blog__cover-wrapper">
+      <source class="blog__cover-webp" srcset="" type="image/webp" data-blog-cover-webp />
+      <img
+        class="blog__cover"
+        src=""
+        alt="blog cover"
+        loading="lazy"
+        decoding="async"
+        width="180"
+        height="180"
+        data-blog-cover
+      />
+    </picture>
+
+    <h1 class="blog-header__title" data-blog-header-title>Title</h1>
+    <p class="blog__info" data-blog-info>Jan 8, 2021 | By VitaThemes</p>
+    <p class="blog__short-description" data-blog-short-description>short description</p>
+    <h2 class="blog__title" data-blog-title>title</h2>
+    <p class="blog__description" data-blog-description>description</p>
+
+    <ul class="blog__hashtags">
+      <li class="blog__hashtag" data-blog-hashtag>#hashtag</li>
+      <li class="blog__hashtag" data-blog-hashtag>#hashtag</li>
+      <li class="blog__hashtag" data-blog-hashtag>#hashtag</li>
+    </ul>
+
+    <div class="share blog__share">
+      <p class="share__text">Share:</p>
+      <ul class="share__list">
+        <li class="share__item">
+          <a
+            href="https://www.facebook.com/"
+            class="footer__social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="go to facebook"
+          >
+            <svg class="footer__social-icon" aria-hidden="true">
+              <use href="#icon-footer-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="share__item">
+          <a
+            href="https://github.com/"
+            class="footer__social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="go to github"
+          >
+            <svg class="footer__social-icon" aria-hidden="true">
+              <use href="#icon-footer-github"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="share__item">
+          <a
+            href="https://x.com/"
+            class="footer__social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="go to twitter"
+          >
+            <svg class="footer__social-icon" aria-hidden="true">
+              <use href="#icon-footer-twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+{% endblock %}

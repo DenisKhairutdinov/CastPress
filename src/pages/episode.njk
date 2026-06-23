@@ -1,0 +1,183 @@
+{% set pageTitle = "Episode" %}
+{% set bodyClass = "default" %}
+{% extends "layout.njk" %}
+
+{% block content %}
+  <section class="episode container">
+    <header class="episode-header">
+      <picture class="episode-header__cover-wrapper">
+        <source
+          class="episode-header__cover-webp"
+          srcset=""
+          type="image/webp"
+          data-episode-cover-webp
+        />
+        <img
+          class="episode-header__cover"
+          src=""
+          alt="episode cover"
+          loading="lazy"
+          decoding="async"
+          width="180"
+          height="180"
+          data-episode-cover
+        />
+      </picture>
+
+      <h1 class="episode-header__title" data-episode-header-title>Title</h1>
+
+      <p class="episode-header__info" data-episode-info>Episode 18 | Jan 8, 2021 | By VitaThemes</p>
+
+      <div class="player episode-header__player" data-player>
+        <audio src="" class="player__audio" data-episode-audio data-player-audio></audio>
+        <button
+          class="player__play-pause-button"
+          type="button"
+          aria-label="play/pause"
+          data-play-pause-button
+        >
+          <svg class="player__play-pause-icon" data-play-pause-icon>
+            <use href="#icon-player-play"></use>
+            <use href="#icon-player-pause" hidden></use>
+          </svg>
+        </button>
+        <span class="player__current-time" data-current-time>00:00</span>
+        <input
+          class="player__progress"
+          type="range"
+          min="0"
+          max="100"
+          value="0"
+          aria-label="audio progress"
+          aria-valuetext="0 hours 0 minutes 0 seconds"
+          data-progress
+        />
+        <span class="player__duration" data-duration>01:00</span>
+        <button class="player__mute-button" type="button" aria-label="mute/unmute" data-mute-button>
+          <!-- <img src="/src/assets/icons/player/unmute.svg" alt="" class="player__mute-icon" /> -->
+          <svg class="player__mute-icon" data-mute-icon>
+            <use href="#icon-player-unmute"></use>
+            <use href="#icon-player-mute" hidden></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="streaming episode-header__streaming">
+        <p class="streaming__text">listen on</p>
+        <ul class="streaming__list" data-episode-streamings>
+          <li class="streaming__item">
+            <a
+              href=""
+              class="streaming__link"
+              target="_blank"
+              rel="noopener norefferer"
+              data-name="spotify"
+              aria-label="go to spotify stream"
+            >
+              <svg class="streaming__icon" aria-hidden="true">
+                <use href="#icon-stremaing-spotify"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="streaming__item">
+            <a
+              href=""
+              class="streaming__link"
+              target="_blank"
+              rel="noopener norefferer"
+              data-name="soundcloud"
+            >
+              <svg class="streaming__icon" aria-hidden="true">
+                <use href="#icon-stremaing-soundcloude"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="streaming__item">
+            <a
+              href=""
+              class="streaming__link"
+              target="_blank"
+              rel="noopener norefferer"
+              data-name="appleMusic"
+            >
+              <svg class="streaming__icon" aria-hidden="true">
+                <use href="#icon-stremaing-apple-music"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <p class="episode__short-description" data-episode-short-description>short description</p>
+    <h2 class="episode__title" data-episode-title>title</h2>
+    <p class="episode__description" data-episode-description>description</p>
+    <div class="episode__transcription">
+      <p class="episode__transcription-info">
+        Listening time:
+        <span class="episode__transcription-info-duration" data-episode-duration>86</span> minutes |
+        <button
+          class="episode__transcription-info-button"
+          type="button"
+          aria-expanded="false"
+          data-episode-transcription-button
+        >
+          View transcript
+        </button>
+      </p>
+      <p class="episode__transcription-text" aria-hidden="true" data-episode-transcription>
+        Transcription text
+      </p>
+    </div>
+    <ul class="episode__hashtags">
+      <li class="episode__hashtag" data-episode-hashtag>#hashtag</li>
+      <li class="episode__hashtag" data-episode-hashtag>#hashtag</li>
+      <li class="episode__hashtag" data-episode-hashtag>#hashtag</li>
+    </ul>
+
+    <div class="share episode__share">
+      <p class="share__text">Share:</p>
+      <ul class="share__list">
+        <li class="share__item">
+          <a
+            href="https://www.facebook.com/"
+            class="footer__social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="go to facebook"
+          >
+            <svg class="footer__social-icon" aria-hidden="true">
+              <use href="#icon-footer-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="share__item">
+          <a
+            href="https://github.com/"
+            class="footer__social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="go to github"
+          >
+            <svg class="footer__social-icon" aria-hidden="true">
+              <use href="#icon-footer-github"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="share__item">
+          <a
+            href="https://x.com/"
+            class="footer__social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="go to twitter"
+          >
+            <svg class="footer__social-icon" aria-hidden="true">
+              <use href="#icon-footer-twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+{% endblock %}

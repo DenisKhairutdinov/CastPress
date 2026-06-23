@@ -1,0 +1,49 @@
+:root {
+  // main colors
+  --headers: #222;
+  --background: #fff;
+  --accent: #9271d6;
+
+  // neutral colors
+  --primary-text: #555;
+  --secondary-text: #979797;
+  --control-background: #f5f5f7;
+  --control-hover: #eaeaee;
+  --border: #eaeaee;
+
+  // error color
+  --error: #ff3636;
+
+  // icons
+  --icon-primary: invert(32%) sepia(0%) saturate(1628%) hue-rotate(149deg) brightness(97%)
+    contrast(87%);
+  --icon-secondary: invert(66%) sepia(0%) saturate(0%) hue-rotate(338deg) brightness(91%)
+    contrast(93%);
+  --icon-accent: invert(33%) sepia(24%) saturate(5328%) hue-rotate(242deg) brightness(83%)
+    contrast(90%);
+}
+
+html[data-dark-theme] {
+  // main colors
+  --headers: #f6f6f6;
+  --background: #0a0a0b;
+  --accent: #9271d6;
+
+  // neutral colors
+  --primary-text: #b3b3b3;
+  --secondary-text: #6c6c6c;
+  --control-background: #202021;
+  --control-hover: #363638;
+  --border: #363638;
+
+  // error color
+  --error: #ff3636;
+
+  // icons
+  --icon-primary: invert(86%) sepia(0%) saturate(0%) hue-rotate(185deg) brightness(85%)
+    contrast(86%);
+  --icon-secondary: invert(44%) sepia(0%) saturate(404%) hue-rotate(215deg) brightness(93%)
+    contrast(88%);
+  --icon-accent: invert(33%) sepia(24%) saturate(5328%) hue-rotate(242deg) brightness(83%)
+    contrast(90%);
+}

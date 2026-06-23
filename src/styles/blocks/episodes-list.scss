@@ -1,0 +1,145 @@
+.episodes-list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, max-content);
+  row-gap: rem(40);
+
+  min-block-size: rem(579);
+  max-block-size: rem(579);
+  margin-block-end: rem(64);
+
+  transition: transform 1ms $ease-out $medium;
+
+  &--animated {
+    animation: fade $slow $ease-out;
+  }
+
+  @container main (width >= #{$container}) {
+    min-block-size: rem(459);
+    max-block-size: rem(459);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  50% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.episodes-list__item {
+  align-self: center;
+}
+
+.episodes-list__info {
+  @include heading-5-regular;
+
+  margin-block-end: rem(12);
+  color: var(--secondary-text);
+
+  &--new {
+    &::before {
+      @include heading-6-semibold;
+
+      content: 'new';
+
+      margin-inline-end: rem(8);
+      padding-block: rem(6);
+      padding-inline: rem(8);
+      border-radius: 2px;
+
+      color: var(--accent);
+      text-transform: uppercase;
+
+      background-color: var(--control-background);
+    }
+  }
+}
+
+.episodes-list__title {
+  @include heading-2;
+
+  display: block;
+
+  margin-block-end: rem(12);
+
+  color: var(--primary-text);
+  text-decoration: none;
+
+  transition:
+    color $medium $ease-out,
+    opacity $medium $ease-out,
+    scale $medium $ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  @media (pointer: fine) {
+    &:active {
+      scale: 0.99;
+      color: var(--accent);
+      opacity: 0.8;
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active {
+      scale: 0.99;
+      color: var(--accent);
+      opacity: 0.8;
+    }
+  }
+}
+
+.episodes-list__short-description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+
+  margin-block-end: rem(6);
+
+  color: var(--primary-text);
+
+  @media (width >= $breakpoint) {
+    -webkit-line-clamp: 2;
+  }
+}
+
+.episodes-list__actions {
+  block-size: rem(44);
+}
+
+.episodes-list__play-button {
+  @include reset-button-styles;
+  @include heading-6-semibold;
+
+  display: flex;
+  flex-direction: row;
+  column-gap: rem(10);
+  align-items: center;
+
+  block-size: 100%;
+
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.episodes-list__button-icon {
+  width: rem(24);
+  height: rem(24);
+  fill: var(--accent);
+}

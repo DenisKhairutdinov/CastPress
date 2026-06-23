@@ -1,0 +1,41 @@
+<button
+  class="menu-button"
+  type="button"
+  aria-label="open menu"
+  aria-expanded="false"
+  aria-controls="menu"
+  data-menu-button
+></button>
+
+<nav id="menu" class="menu" aria-label="main navigation" data-menu>
+  <ul class="menu__list" aria-hidden="true" data-menu-list>
+    <li class="menu__item menu__item--has-submenu">
+      <button
+        class="menu__toggle menu__link"
+        type="button"
+        aria-label="open episodes submenu"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="submenu-1"
+        data-submenu-button
+        data-menu-link
+      >
+        episodes
+      </button>
+      <ul id="submenu-1" class="menu__sublist" aria-hidden="true" data-menu-sublist></ul>
+    </li>
+
+    <li class="menu__item">
+      <a href="/blog" class="menu__link" data-menu-link>blog</a>
+    </li>
+    <li class="menu__item">
+      <a href="/about" class="menu__link" data-menu-link>about</a>
+    </li>
+    <li class="menu__item">
+      <a href="/contact" class="menu__link" data-menu-link>contact</a>
+    </li>
+    <li class="menu__item menu__item--has-icon">
+      <a href="/donate" class="menu__link menu__link--has-icon" data-menu-link>donate</a>
+    </li>
+  </ul>
+</nav>

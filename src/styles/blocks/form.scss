@@ -1,0 +1,168 @@
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(28);
+}
+
+.form__group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(8);
+}
+
+.form__label {
+  @include heading-4;
+
+  color: var(--primary-text);
+
+  &--smaller {
+    cursor: pointer;
+    font-size: rem(12);
+  }
+
+  &--hidden {
+    @include hidden-lable;
+  }
+}
+
+.form__input {
+  block-size: rem(42);
+  padding-inline: rem(8);
+  border: 1px solid var(--background);
+  border-radius: $border-radius;
+
+  color: var(--primary-text);
+
+  background-color: var(--control-background);
+
+  &::placeholder {
+    color: var(--secondary-text);
+  }
+
+  &:focus {
+    border: 1px solid var(--accent);
+    outline: none;
+  }
+
+  &--error {
+    border: 1px solid var(--error);
+
+    &:focus {
+      border: 1px solid var(--error);
+      outline: none;
+    }
+  }
+}
+
+.form__textarea {
+  resize: none;
+
+  block-size: rem(150);
+  padding-block-start: rem(8);
+  padding-inline: rem(8);
+  border: 1px solid var(--background);
+  border-radius: $border-radius;
+
+  color: var(--primary-text);
+
+  background-color: var(--control-background);
+
+  &::placeholder {
+    color: var(--secondary-text);
+  }
+
+  &:focus {
+    border: 1px solid var(--accent);
+    outline: none;
+  }
+}
+
+.form__checkbox {
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: row;
+  column-gap: rem(8);
+  align-items: center;
+}
+
+.form__error {
+  position: absolute;
+  inset-block-start: 100%;
+  font-size: rem(14);
+  color: var(--error);
+
+  &--animated {
+    animation: shake $medium $ease-out;
+  }
+
+  &--empty {
+    display: none;
+  }
+
+  &--invalid {
+    display: none;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(rem(0));
+  }
+
+  25% {
+    transform: translateX(rem(5));
+  }
+
+  50% {
+    transform: translateX(rem(0));
+  }
+
+  75% {
+    transform: translateX(rem(5));
+  }
+
+  100% {
+    transform: translateX(rem(0));
+  }
+}
+
+.form__message {
+  @include heading-5-regular;
+  @include centering;
+
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translateX(-50%) translateY(-170%);
+
+  display: flex;
+
+  inline-size: 100%;
+  max-inline-size: rem(300);
+  padding: rem(12);
+  border-radius: $border-radius;
+
+  color: var(--background);
+
+  visibility: visible;
+  opacity: 1;
+  background-color: var(--accent);
+  box-shadow: 0 0 8px 0 rgba($color: #000, $alpha: 0.3);
+
+  transition:
+    transform $medium $ease-out,
+    opacity $medium $ease-out,
+    visibility 1ms $ease-out;
+
+  &--hidden {
+    transform: translateX(-50%) translateY(0) scale(0.4);
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      transform $medium $ease-out,
+      visibility 1ms $ease-out $medium;
+  }
+}

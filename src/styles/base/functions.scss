@@ -1,0 +1,16 @@
+@function clamp-rem($min, $max, $mobile: 768, $desktop: 1920) {
+  $min-rem: $min / 16;
+  $max-rem: $max / 16;
+  $max-width-rem: $desktop / 16;
+  $min-width-rem: $mobile / 16;
+  $slope: ($max-rem - $min-rem) / ($max-width-rem - $min-width-rem) * 100;
+  $intercept: $min-rem - $slope * ($min-width-rem / 100);
+
+  @return clamp(#{$min-rem}rem, calc(#{$intercept}rem + #{$slope}vw), #{$max-rem}rem);
+}
+
+@function rem($px) {
+  $rem: $px / 16;
+
+  @return #{$rem}rem;
+}

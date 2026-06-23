@@ -1,0 +1,40 @@
+.privacy-policy {
+  @include padding-block;
+
+  color: var(--primary-text);
+}
+
+.privacy-policy__title {
+  @include heading-1;
+
+  margin-block-end: rem(40);
+}
+
+.privacy-policy__subtitle {
+  @include heading-2;
+
+  margin-block-end: rem(24);
+}
+
+.privacy-policy__text {
+  @include heading-4;
+
+  margin-block-end: rem(40);
+}
+
+.privacy-policy__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(12);
+
+  padding-inline-start: rem(16);
+
+  list-style-type: disc;
+}
+
+.privacy-policy__item {
+}
+
+.privacy-policy__item-text {
+  @include heading-4;
+}

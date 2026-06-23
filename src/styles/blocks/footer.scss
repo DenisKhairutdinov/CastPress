@@ -1,0 +1,213 @@
+.footer {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+
+  border-block-start: $border;
+
+  background-color: var(--background);
+
+  view-transition-name: footer;
+}
+
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  inline-size: rem(288);
+  padding-block: rem(48) rem(24);
+
+  @media (width >= $breakpoint) {
+    grid-template-columns: 1fr 1fr;
+    inline-size: rem(670);
+    padding-block: rem(64) rem(40);
+  }
+}
+
+.footer__menu {
+  @include heading-5-semibold;
+
+  margin-block-end: rem(32);
+}
+
+.footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(8);
+}
+
+.footer__menu-link {
+  color: var(--primary-text);
+  text-decoration: none;
+  transition:
+    color $medium $ease-out,
+    scale $medium $ease-out,
+    opacity $medium $ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  @media (pointer: fine) {
+    &:active {
+      scale: 0.94;
+      color: var(--accent);
+      opacity: 0.8;
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active {
+      scale: 0.94;
+      color: var(--accent);
+      opacity: 0.8;
+    }
+  }
+}
+
+.footer__newsletter {
+  margin-block-end: rem(64);
+
+  @media (width >= $breakpoint) {
+    justify-self: end;
+    inline-size: rem(316);
+  }
+}
+
+.footer__newsletter-title {
+  margin-block-end: rem(8);
+
+  font-family: SourceSerifProSemiBold, sans-serif;
+  font-size: rem(16);
+  color: var(--primary-text);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.footer__newsletter-text {
+  margin-block-end: rem(16);
+  color: var(--primary-text);
+}
+
+.footer__form {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  & .form__group {
+    min-inline-size: 100%;
+  }
+}
+
+.footer__custom-button {
+  @include centering;
+
+  position: absolute;
+  inset-inline-end: 0;
+
+  inline-size: rem(36);
+  block-size: rem(36);
+  margin: rem(3);
+
+  & .custom-button__icon {
+    min-width: rem(11);
+    min-height: rem(8);
+  }
+}
+
+.footer__description {
+  @include heading-5-regular;
+
+  margin-block-end: rem(10);
+  color: var(--primary-text);
+  text-align: center;
+
+  @media (width >= $breakpoint) {
+    grid-column: 1 / span 2;
+  }
+}
+
+.footer__description-link {
+  color: var(--primary-text);
+  transition:
+    color $medium $ease-out,
+    scale $medium $ease-out,
+    opacity $medium $ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  @media (pointer: fine) {
+    &:active {
+      scale: 0.98;
+      color: var(--accent);
+      opacity: 0.8;
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active {
+      scale: 0.98;
+      color: var(--accent);
+      opacity: 0.8;
+    }
+  }
+}
+
+.footer__socials {
+  @include centering;
+
+  display: flex;
+  flex-direction: row;
+  column-gap: rem(8);
+  justify-content: center;
+
+  @media (width >= $breakpoint) {
+    grid-column: 1 / span 2;
+  }
+}
+
+.footer__social-link {
+  @include centering;
+
+  inline-size: rem(44);
+  block-size: rem(44);
+
+  @media (hover: hover) {
+    &:hover .footer__social-icon {
+      fill: var(--accent);
+    }
+  }
+
+  @media (pointer: fine) {
+    &:active .footer__social-icon {
+      scale: 0.98;
+      opacity: 0.8;
+      fill: var(--accent);
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active .footer__social-icon {
+      scale: 0.98;
+      opacity: 0.8;
+      fill: var(--accent);
+    }
+  }
+}
+
+.footer__social-icon {
+  inline-size: rem(20);
+  block-size: rem(20);
+  fill: var(--primary-text);
+  transition:
+    fill $medium $ease-out,
+    scale $medium $ease-out,
+    opacity $medium $ease-out;
+}
