@@ -1,1 +1,0 @@
-System.register(["./main-legacy-D2g7vGdb.js"],function(e,t){return{setters:[function(e){}],execute:function(){}}});
