@@ -1,0 +1,1 @@
+System.register(["./main-legacy-D2udcN-T.js"],function(e,t){return{setters:[function(e){}],execute:function(){}}});

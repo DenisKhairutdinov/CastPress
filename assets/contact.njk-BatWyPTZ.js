@@ -1,0 +1,1 @@
+import'data:text/javascript,"assets/contact.njk-BatWyPTZ.js";if(!import.meta.resolve)throw Error("import.meta.resolve not supported")';export function __vite_legacy_guard(){import.meta.url,import(`_`).catch(()=>1),(async function*(){})().next()}import"./modulepreload-polyfill-Dezn_h7o.js";import"./main-CxQwVCTz.js";
