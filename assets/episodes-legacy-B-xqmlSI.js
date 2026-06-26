@@ -1,0 +1,1 @@
+System.register([],function(s,e){var n;return{setters:[],execute:function(){s("episodes",n={seasons:[{season:1,file:"season1.json"},{season:2,file:"season2.json"},{season:3,file:"season3.json"},{season:4,file:"season4.json"}]}),s("default",{episodes:n})}}});

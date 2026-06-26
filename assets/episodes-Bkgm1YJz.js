@@ -1,0 +1,1 @@
+var e={seasons:[{season:1,file:`season1.json`},{season:2,file:`season2.json`},{season:3,file:`season3.json`},{season:4,file:`season4.json`}]},t={episodes:e};export{t as default,e as episodes};
