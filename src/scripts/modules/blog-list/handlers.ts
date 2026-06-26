@@ -37,7 +37,7 @@ class Blog {
           <div class="blog-list__info">
             <p class="blog-list__title">${this.title}</p>
             <span class="blog-list__date">${this.date}</span>
-            <a href="/blog-single?id=${this.id}" class="blog-list__link" aria-label="go to blog page">Read More</a>
+            <a href="/CastPress/blog-single?id=${this.id}" class="blog-list__link" aria-label="go to blog page">Read More</a>
           </div>
         `;
     return blog;

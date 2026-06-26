@@ -111,7 +111,7 @@ export const handlers = {
 
       seasonsItem.innerHTML = `
         <a 
-          href="/episode?id=${element.id}" 
+          href="/CastPress/episode?id=${element.id}" 
           class="menu__sublink"
           data-menu-sublink
         >${element.title}</a>

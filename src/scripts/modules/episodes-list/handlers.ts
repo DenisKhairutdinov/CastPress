@@ -22,7 +22,7 @@ class Episode {
     episode.classList.add('episodes-list__item');
     episode.innerHTML = `
       <p class="episodes-list__info">${this.category} | ${this.date}</p>
-      <a href="/episode?id=${this.id}" class="episodes-list__title" aria-label="go to episode page">${this.id} - ${this.title}</a>
+      <a href="/CastPress/episode?id=${this.id}" class="episodes-list__title" aria-label="go to episode page">${this.id} - ${this.title}</a>
       <p class="episodes-list__short-description">${this.shortDescription}</p>
     `;
     return episode;
