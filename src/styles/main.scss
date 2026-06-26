@@ -70,8 +70,8 @@ textarea {
   transform: translateY(30%);
   opacity: 0;
   transition:
-    opacity $slow * 3 $ease-out,
-    transform $slow * 3 $ease-out;
+    opacity $slow * 2 $ease-out,
+    transform $slow * 2 $ease-out;
 }
 
 .is-visible {
