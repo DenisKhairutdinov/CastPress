@@ -1,0 +1,1 @@
+System.register(["./main-legacy-CS6HooZk.js"],function(e,t){return{setters:[function(e){}],execute:function(){}}});
