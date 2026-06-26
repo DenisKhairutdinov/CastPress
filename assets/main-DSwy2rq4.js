@@ -42,7 +42,7 @@
         ></ul>
       `,e[0].append(n)}},loadSeasonsSublists(e,t){for(let n of t){let t=document.createElement(`li`);t.classList.add(`menu__subitem`),t.dataset.id=String(n.id),t.innerHTML=`
         <a 
-          href="/episode?id=${n.id}" 
+          href="/CastPress/episode?id=${n.id}" 
           class="menu__sublink"
           data-menu-sublink
         >${n.title}</a>
