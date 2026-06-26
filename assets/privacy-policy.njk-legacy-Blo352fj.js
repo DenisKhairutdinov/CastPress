@@ -1,1 +1,0 @@
-System.register(["./modulepreload-polyfill-legacy-SoEMcJZ9.js","./main-legacy-cYtim2Pf.js"],function(e,n){return{setters:[function(e){},function(e){}],execute:function(){}}});
