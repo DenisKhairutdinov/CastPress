@@ -1,1 +1,0 @@
-System.register(["./main-legacy-CVgF6M3H.js"],function(e,t){return{setters:[function(e){}],execute:function(){}}});

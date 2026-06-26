@@ -1,0 +1,1 @@
+System.register(["./main-legacy-DAcd2_uO.js"],function(e,t){return{setters:[function(e){}],execute:function(){}}});

@@ -1,0 +1,1 @@
+System.register(["./main-legacy-C-1nJBOC.js"],function(e,t){return{setters:[function(e){}],execute:function(){}}});

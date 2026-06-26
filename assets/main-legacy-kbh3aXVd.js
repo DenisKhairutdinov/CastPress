@@ -1,1 +1,0 @@
-System.register(["./main-legacy-_KnvSMQZ.js"],function(e,t){return{setters:[function(e){}],execute:function(){}}});
